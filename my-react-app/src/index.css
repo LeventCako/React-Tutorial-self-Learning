@@ -1,0 +1,389 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+/* 
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+} */
+
+button:hover {
+  border-color: #646cff;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+
+  a:hover {
+    color: #747bff;
+  }
+
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+
+.card .profilepic {
+  height: 50px;
+}
+
+.card {
+  border: 1px solid rgb(179, 169, 169);
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px rgba(65, 63, 63, 0.2);
+  padding: 20px;
+  text-align: center;
+  max-width: 250px;
+  max-height: 250px;
+  display: inline-block;
+}
+
+.card .card-title {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  color: black;
+}
+
+.card .card-text {
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+
+}
+
+.student {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  padding: 10px;
+  border: 1px solid black;
+
+}
+
+.student p {
+  margin: 0;
+}
+
+
+
+.welcome-message {
+  font-size: 2.5em;
+  background-color: lightgreen;
+  color: white;
+  padding: 10px;
+}
+
+.login-prompt {
+  font-size: 2.5em;
+  background-color: red;
+  color: white;
+  padding: 10px;
+}
+
+
+.list-category {
+  font-size: 2.5em;
+  font-weight: bold;
+  color: rgb(71, 69, 69);
+  margin-bottom: 10px;
+  text-align: center;
+  border: 3px solid;
+  border-radius: 5px;
+  background-color: rgb(32, 162, 238);
+}
+
+.list-items li {
+  font-size: 2em;
+  color: #1a1a1a;
+  text-align: center;
+  margin: 0;
+
+}
+
+.list-items li:hover {
+  color: grey;
+  cursor: pointer;
+  font-size: 2.2em;
+}
+
+.profilePic {
+  height: 30px;
+}
+
+
+.Counter-container {
+  border: 2px solid black;
+  border-radius: 30%;
+  text-align: center;
+  height: 300px;
+
+}
+
+.resultCount {
+  font-size: 2em;
+  cursor: pointer;
+}
+
+.incrementCount,
+.decrementCount,
+.resetCount,
+.plus10Count {
+  background-color: bisque;
+  margin-right: 5px;
+
+}
+
+.incrementCount:hover,
+.decrementCount:hover,
+.resetCount:hover,
+.plus10Count:hover {
+  background-color: rgb(230, 202, 168);
+  border: 1px solid white;
+  height: 45px;
+
+
+
+}
+
+
+.OnChangeDiv {
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 120px;
+  background-color: aliceblue;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.OnChangeDiv:hover {
+
+  width: 650px;
+  background-color: rgb(226, 231, 236);
+  border: 3px solid black;
+  transition: 0.2s;
+}
+
+.Colorpicker-container  {
+  display: 'flex';
+  flex-direction: column;
+ justify-content: center;
+ align-items: center;
+height: 100vh;
+margin-left: 120px;
+  
+  
+}
+
+.Color-Display{
+  height: 200px;
+  width: 300px;
+  margin-bottom: 90px;
+  border-radius: 22px;
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+
+.ColorChooser{
+margin-left: 100px;
+}
+
+
+.CarObjectDiv {
+  margin-left: 100px;
+  margin-bottom: 300px;
+}
+
+.AddCarButton {
+  display: flex;
+  justify-content: center;
+  height: 30px;
+  font-size: 12px;
+  
+  border: 1px solid black;
+  margin-top: 10px;
+}
+
+
+.ToDoDiv {
+  display: flex;
+  justify-content: center;
+  
+}
+
+
+.ToDoList{
+ 
+  
+  padding: 10px;
+  border: 1px solid black;
+  display: flex;
+ 
+
+  
+}
+
+.deleteTaskBtn{
+  background-color: red;
+  color: white;
+  margin-left: 40%;
+  margin-right: 6px;
+  cursor: pointer;
+  border: none;
+  padding: 4px ;
+  transition: background-color 0.5s ease;
+  
+}
+
+.deleteTaskBtn:hover{
+  background-color: rgb(209, 58, 58);
+}
+
+.add-button{
+  background-color: green;
+  color: white;
+  cursor: pointer;
+  border: none;
+
+}
+
+.upTaskBtn {
+background-color: rgb(16, 172, 211);
+border: none;
+
+}
+
+
+
+.upTaskBtn:hover {
+background-color: rgb(6, 194, 241);
+}
+
+
+.downTaskBtn {
+border: none;
+background-color: rgb(223, 122, 28);
+
+}
+
+
+.downTaskBtn:hover {
+  background-color: rgb(255, 123, 0);
+}
+
+.inputTask[type="text"] {
+font-size: 1.6rem;
+padding: 10px;
+border: 2px solid black;
+
+}
+
+.OLTask {
+  padding: 0;
+}
+
+li{
+  
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 15px;
+  background-color: rgb(214, 205, 205);
+  margin-bottom: 10px;
+  border: 3px solid rgb(158, 151, 151);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.deleteTaskBtn, .upTaskBtn, .downTaskBtn{
+  padding: 8px 12px;
+  font-size: 1.4rem;
+  margin-left: 10px;
+}
+
+
+
+.AppBody{
+background-image: url(assets/Scenery.jpg);
+height: 600px;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+background-attachment: fixed;
+
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 50vh;
+}
+
+
+.ClockContainer{
+backdrop-filter: blur(2px);
+width: 100vw;
+padding-inline: 10px 0;
+}
+
+.Clock{
+ color: white;
+ font-size: 6rem;
+ font-weight: bold;
+ font-family: monospace;
+ text-align: center;
+ text-shadow: 3px 3px 5px black;
+}
+
+.box {
+  margin-top: 50px;
+  border: 3px solid;
+  padding: 25px;
+}
