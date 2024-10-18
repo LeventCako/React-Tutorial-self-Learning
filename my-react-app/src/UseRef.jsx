@@ -14,24 +14,67 @@ helpful with...
 2. handling Focus, Animations, and Transitions
 3. Managing Timers and Intervals*/
 
+/* Why? = better time efficient Code since it only renders once 
+rather than every time*/
 
 function UseRef() {
-/* Now it doesnt re render after ever */
-    const ref = useRef(0);
+    /* Now it doesnt re render after ever */
+    /* When using ref it returns an Object
+    with one property called 'current' */
 
-   useEffect(() => {
-    console.log("COMPONENT RENDERED");
-   })
+    const inputRef1 = useRef(null);
+    const inputRef2 = useRef(null);
+    const inputRef3 = useRef(null);
 
-    function handleClick() {
-        ref.current++;
-        console.log(ref.current)
+    useEffect(() => {
+        console.log("COMPONENT RENDERED");
+    })
 
+    function handleClick1() {
+      inputRef1.current.focus();
+      inputRef1.current.style.backgroundColor = "yellow";
+      inputRef2.current.style.backgroundColor = "";
+      inputRef3.current.style.backgroundColor = "";
     }
+
+    
+    function handleClick2() {
+        inputRef2.current.focus();
+        inputRef1.current.style.backgroundColor = "";
+        inputRef2.current.style.backgroundColor = "yellow";
+        inputRef3.current.style.backgroundColor = "";
+      }
+
+
+      
+    function handleClick3() {
+        inputRef3.current.focus();
+        inputRef1.current.style.backgroundColor = "";
+        inputRef2.current.style.backgroundColor = "";
+        inputRef3.current.style.backgroundColor = "yellow";
+      }
+
+
     return (<>
-        <button className='useRefBtn' onClick={handleClick}>
-            Click Me:
-        </button>
+        <div className='RefDiv'>
+
+            <button className='useRefBtn' onClick={handleClick1}>
+                Click Me 1:
+            </button>
+            <input ref={inputRef1}/>
+
+            <button className='useRefBtn' onClick={handleClick2}>
+                Click Me 2:
+            </button>
+            <input ref={inputRef2}/>
+
+
+            <button className='useRefBtn' onClick={handleClick3}>
+                Click Me 3:
+            </button>
+            <input ref={inputRef3}/>
+        </div>
+
 
 
     </>)
