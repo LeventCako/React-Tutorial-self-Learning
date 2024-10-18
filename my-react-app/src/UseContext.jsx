@@ -28,7 +28,6 @@ function UseContext() {
       so the one who stores the Data
       UserContext2 is the Child who gets passed down the data */}
 
-      
       <UserContext.Provider value={user}>
         <UseContext2 user={user}></UseContext2>
       </UserContext.Provider>
