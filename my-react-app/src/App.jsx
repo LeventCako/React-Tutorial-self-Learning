@@ -21,6 +21,7 @@ import UseEffect from './UseEffect.jsx'
 import ClockApp from './DigitalClockApp.jsx'
 import UseContext from './UseContext.jsx'
 import UseRef from './UseRef.jsx'
+import Stopwatch from './Stopwatch.jsx'
 function App() {
  
 
@@ -86,6 +87,7 @@ function App() {
       <ClockApp></ClockApp>
       <UseContext></UseContext>
       <UseRef></UseRef>
+      <Stopwatch></Stopwatch>
     </>
 
 
