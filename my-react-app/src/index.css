@@ -423,3 +423,42 @@ padding-inline: 10px 0;
   text-shadow: 2px 2px 2px hsla(0, 0%, 0%, 0.75);
   margin-bottom: 25px;
 }
+
+
+.controls button {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 10px 20px;
+  margin: 5px;
+  min-width: 125px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  transition: background-color 0.5s ease;
+
+}
+
+.startBtn {
+  background-color: hsl(115, 100%, 40%);
+
+}
+
+.startBtn:hover {
+  background-color: hsl(115,100%,35%);
+}
+
+.stopBtn{
+  background-color: hsl(0, 78%, 50%);
+}
+.stopBtn:hover{
+  background-color: hsl(0, 78%, 40%);
+}
+
+.resetBtn{
+  background-color: hsl(0, 0%, 50%);
+}
+
+
+.resetBtn:hover{
+  background-color: hsl(0, 0%, 40%);
+}
