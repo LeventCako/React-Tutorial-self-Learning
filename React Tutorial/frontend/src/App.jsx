@@ -1,25 +1,16 @@
-
 import './App.css'
+import MovieCard from './components/MovieCard'
 
 function App() {
   
   return (
    <>
-   <div>
-    <p>Hello World</p>
-    <Text show={"Count = "}/>
-   </div>
+   <MovieCard movie={{title: "Levents Film", release_date: "2024"}}></MovieCard>
+   <MovieCard movie={{title: "Meleks Film", release_date: "2024"}}></MovieCard>
    </>
   )
 }
 
 
-function Text({show}) {
-  return(
-    <div>
-      <p>{show}</p>
-    </div>
-  )
-}
 
 export default App
