@@ -1,33 +1,34 @@
 import MovieCard from "../components/MovieCard"
-import { useState, useEffect } from "react"
+import React, { useState, useEffect } from "react"
 import { searchMovies, getPopularMovies } from "../../../services/api";
 import "../css/home.css"
 function Home() {
-
+console.log("Home component rendered");
     const [searchQuery, setSearchQuery] = useState("");
     const [movies, setMovies] = useState([]);
     const [error, setError] = useState(null);
     const [loading, setLoading] = useState(true);
 
 
-    console.log(getPopularMovies);
-   useEffect(() => {
-    const loadPopularMovies = async () => {
-        try {
-            console.log("Fetching popular movies...");
-            const popularMovies = await getPopularMovies();
-            console.log("Fetched movies:", popularMovies); // Check if movies are received
-            setMovies(popularMovies); // Ensure movies is an array
-        } catch (err) {
-            console.error("Error fetching movies:", err);
-            setError("Failed Loading...");
-        } finally {
-            setLoading(false);
-        }
-    };
+   
+    useEffect(() => {
+        const loadPopularMovies = async () => {
+            try {
+                console.log("Fetching popular movies...");
+                const response = await fetch("https://api.themoviedb.org/3/movie/popular?api_key=ac57756d2e0691a6bdd16ffa9d46af04");
+                const data = await response.json();
+                console.log("Raw API response:", data);
+                setMovies(data.results || []);
+            } catch (err) {
+                console.error("Error fetching movies:", err);
+                setError("Failed Loading...");
+            } finally {
+                setLoading(false);
+            }
+        };
 
-    loadPopularMovies();
-}, []);
+        loadPopularMovies();
+    }, []);
 
 
 
