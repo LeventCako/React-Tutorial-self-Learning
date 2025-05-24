@@ -32,9 +32,23 @@ console.log("Home component rendered");
 
 
 
-    const handleSearch = (e) => {
+    const handleSearch = async (e) => {
         e.preventDefault();
-        alert(searchQuery);
+        if (!searchQuery.trim()) return ; // Prevent search if input is empty
+        if (loading) return; // Prevent search while loading
+        setLoading(true);
+
+        try {
+            const searchResults = await searchMovies(searchQuery);
+            setMovies(searchResults);
+            setError(null); // Clear any previous errors
+        } catch (err) {
+            console.error("Error during search:", err);
+            setError("Search failed. Please try again.");
+        } finally {
+            setLoading(false);
+        }
+        setSearchQuery("")
     }
 
     return (
@@ -51,12 +65,15 @@ console.log("Home component rendered");
                     <button type="submit" className="search-button">Search</button>
                 </form>
 
+               {error && <p className="error-message">{error}</p>}
 
-                <div className="movies-grid">
+
+                {loading ? <p>Loading...</p> : <div className="movies-grid">
                     {movies.map(movie =>
                         movie.title.toLowerCase().startsWith(searchQuery) && /* Function to filter out */
                         (<MovieCard movie={movie} key={movie.id}></MovieCard>))}
-                </div>
+                </div>}
+                
             </div>
         </>
     )
