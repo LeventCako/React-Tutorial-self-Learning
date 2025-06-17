@@ -1,0 +1,14 @@
+.app{
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+ 
+}
+
+.appHeader{
+    position:absolute;
+    top:10px;
+    left: 50%;
+  
+  
+}
