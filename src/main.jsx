@@ -4,7 +4,7 @@ import './index.css'
 import App from './App.jsx'
 import UserCard from './props.jsx'
 import Zähler from './useState.jsx'
-
+import MapReact from './mapReact.jsx'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <App />
@@ -14,5 +14,6 @@ createRoot(document.getElementById('root')).render(
       <UserCard name="Alice" age="25" location="London" />
     </div>
     <Zähler></Zähler>
+    <MapReact />
   </StrictMode>
 )
