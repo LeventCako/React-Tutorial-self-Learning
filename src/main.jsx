@@ -5,6 +5,7 @@ import App from './App.jsx'
 import UserCard from './props.jsx'
 import Zähler from './useState.jsx'
 import MapReact from './mapReact.jsx'
+import TrainingUseEffect from './useEffect.jsx'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <App />
@@ -15,5 +16,6 @@ createRoot(document.getElementById('root')).render(
     </div>
     <Zähler></Zähler>
     <MapReact />
+    <TrainingUseEffect />
   </StrictMode>
 )
